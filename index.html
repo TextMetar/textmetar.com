@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Text Metar - Aviation Weather SMS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+        <style type="text/css">
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: "Open Sans";
+                line-height: 26px;
+                margin: 0;
+                padding: 0;
+            }
+            header, p {
+                text-align: center;
+                margin: 15 25px;
+            }
+            .phone {
+                margin: 0 auto;
+                width: 400px;
+                overflow-X: hidden;
+                position: relative;
+                background: none repeat scroll 0 0 #fff;
+            }
+            .left {
+              position: absolute;
+              top: 0;
+              left: 35px;
+              font-size: 18px
+            }
+            .left:after {
+                border: 3px solid #2095FE;
+                border-right: 3px solid transparent;
+                border-top: 3px solid transparent;
+                content: " ";
+                height: 14px;
+                left: -20px;
+                position: absolute;
+                top: 20px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+                width: 14px;
+            }
+            .right {
+              position: absolute;
+              top: 0;
+              right: 15px;
+              font-size: 18px
+            }
+            .phone-header {
+              color: #2095FE;
+              background: #eee;
+              border: 1px solid #ccc;
+              border-bottom: 1px solid #bbb;
+              box-shadow: 0 1px 2px rgba(1,1,1,0.2);
+              height: 60px;
+              text-align: center;
+              font-size: 20px;
+              line-height: 58px;
+              white-space: nowrap;
+              
+            }
+            .phone-header .contact {
+              font-weight: bold;
+              color: #111111;
+              margin: 0;
+            }
+            .messages-wrapper {
+              padding-top: 10px;
+              position: relative;
+              border: 1px solid #ddd;
+              border-top: 0 none;
+            }
+            .message {
+                border-radius: 20px 20px 20px 20px;
+                margin: 0 15px 10px;
+                padding: 15px 20px;
+                position: relative;
+            }
+            .message.to {
+                background-color: #2095FE;
+                color: #fff;
+                margin-left: 80px;
+            }
+            .message.from {
+                background-color: #E5E4E9;
+                color: #363636;
+                margin-right: 80px;
+            }
+            .message.to + .message.to,
+            .message.from + .message.from {
+              margin-top: -7px;
+            }
+            .message:before {
+                border-color: #2095FE;
+                border-radius: 50% 50% 50% 50%;
+                border-style: solid;
+                border-width: 0 20px;
+                bottom: 0;
+                clip: rect(20px, 35px, 42px, 0px);
+                content: " ";
+                height: 40px;
+                position: absolute;
+                right: -50px;
+                width: 30px;
+            }
+            .message.from:before {
+                border-color: #E5E4E9;
+                left: -50px;
+                transform: rotateY(180deg);
+            }
+            ul.notes {
+                text-align: center;
+                list-style-type: none;
+                font-size: 10px;
+                margin: 20px 0 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>TextMetar.com - Aviation Weather SMS</h1>
+        </header>
+        <p>METARs and TAFs in the air with cell signal.  No 4G/Wi-Fi required.</p>
+        <p>Add us to your contacts: (714) 352-4346</p>
+        <div class="phone">
+            <div class="phone-header">
+                <span class="left">Messages</span>
+                <span class="contact">(714) 352-4346</span>
+                <span class="right">Contact</span>
+            </div>
+            <div class="messages-wrapper">
+                <div class="message to">KFUL KLGB</div>
+                <div id="message2" class="message from">KFUL 031853Z 00000KT 4SM HZ CLR 19/12 A3007 RMK AO2 SLP183 T01890122</div>
+                <div id="message3" class="message from">KLGB 031853Z 00000KT 6SM HZ CLR 19/13 A3008 RMK AO2 SLP185 T01890128</div>
+                <div id="message4" class="message from">TAF: KLGB 031747Z 0318/0418 00000KT 5SM HZ BKN120<br />FM031900 19006KT P6SM BKN120<br />FM040600 35002KT 5SM BR OVC100</div>
+            </div>
+        </div>
+        <ul class="notes">
+            <li>* Always use official FAA sources when planning your flights, 100% uptime not guaranteed.</li>
+            <li>* Data pulled from <a href="http://aviationweather.gov/dataserver">AviationWeather.gov</a> Text Data Server.</li>
+            <li>* Results are cached for up to 5 minutes.</li>
+        </ul>
+    </body>
+</html>
